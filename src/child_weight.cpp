@@ -165,7 +165,7 @@ NumericVector obese = ifelse(bmiCat == 4, 1.0, 0.0);
 NumericMatrix ffm_ref(17,nind);
   // Average Fat-free mass by BMI category, sex, and age. 
   // The first row (ffm_ref(0,_)) corresponds to individuals aged 2 years old.
-  // The second row (ffm_ref(0,_)) corresponds to individuals aged 3 years old.
+  // The second row (ffm_ref(1,_)) corresponds to individuals aged 3 years old.
   // The last row (ffm_ref(16,_)) corresponds to individuals aged 18 years old.
   
                       // Male               Female                  Male               Female                  Male               Female                 Male               Female
@@ -217,7 +217,7 @@ NumericVector obese = ifelse(bmiCat == 4, 1.0, 0.0);
 NumericMatrix fm_ref(17,nind);
     // Average Fat mass by BMI category, sex, and age. 
   // The first row (fm_ref(0,_)) corresponds to individuals aged 2 years old.
-  // The second row (fm_ref(0,_)) corresponds to individuals aged 3 years old.
+  // The second row (fm_ref(1,_)) corresponds to individuals aged 3 years old.
   // The last row (fm_ref(16,_)) corresponds to individuals aged 18 years old.
   
                       // Male               Female                  Male               Female                  Male               Female                 Male               Female
