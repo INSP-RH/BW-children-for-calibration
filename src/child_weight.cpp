@@ -163,6 +163,12 @@ NumericVector obese = ifelse(bmiCat == 4, 1.0, 0.0);
 
   // sex = 1 if female; sex = 0 if male
 NumericMatrix ffm_ref(17,nind);
+  // Average Fat-free mass by BMI category, sex, and age. 
+  // The first row (ffm_ref(0,_)) corresponds to individuals aged 2 years old.
+  // The second row (ffm_ref(0,_)) corresponds to individuals aged 3 years old.
+  // The last row (ffm_ref(16,_)) corresponds to individuals aged 18 years old.
+  
+                      // Male               Female                  Male               Female                  Male               Female                 Male               Female
 ffm_ref(0,_)   = under*(10.134*(1 - sex) + 9.477*sex)   + normales*(10.134*(1-sex)+9.477*sex)          + over*(10.134*(1-sex)+9.477*sex)        + obese*(10.134*(1-sex)+9.477*sex);    // 2 years old
 ffm_ref(1,_)   = under*(12.099*(1 - sex) + 11.494*sex)   + normales*(12.099*(1 - sex) + 11.494*sex)    + over*(12.099*(1 - sex) + 11.494*sex)   + obese*(12.099*(1 - sex) + 11.494*sex);    // 3 years old
 ffm_ref(2,_)   = under*(14.0*(1 - sex) + 13.2*sex)   + normales*(14.0*(1 - sex) + 13.2*sex)            + over*(14.0*(1 - sex) + 13.2*sex)     + obese*(14.0*(1 - sex) + 13.2*sex);   // 4 years old
@@ -209,6 +215,12 @@ NumericVector over = ifelse(bmiCat == 3, 1.0, 0.0);
 NumericVector obese = ifelse(bmiCat == 4, 1.0, 0.0);
 
 NumericMatrix fm_ref(17,nind);
+    // Average Fat mass by BMI category, sex, and age. 
+  // The first row (fm_ref(0,_)) corresponds to individuals aged 2 years old.
+  // The second row (fm_ref(0,_)) corresponds to individuals aged 3 years old.
+  // The last row (fm_ref(16,_)) corresponds to individuals aged 18 years old.
+  
+                      // Male               Female                  Male               Female                  Male               Female                 Male               Female
 fm_ref(0,_)   = under*(2.456*(1-sex)+ 2.433*sex)   + normales*(2.456*(1-sex)+ 2.433*sex)       + over*(2.456*(1-sex)+ 2.433*sex)   + obese*(2.456*(1-sex)+ 2.433*sex);    // 2 years old
 fm_ref(1,_)   = under*(2.576*(1 - sex) + 2.606*sex)   + normales*(2.576*(1 - sex) + 2.606*sex)  + over*(2.576*(1 - sex) + 2.606*sex)   + obese*(2.576*(1 - sex) + 2.606*sex);   // 3 years old
 fm_ref(2,_)   = under*(2.7*(1 - sex) + 2.8*sex)   + normales*(2.7*(1 - sex) + 2.8*sex)         + over*(2.7*(1 - sex) + 2.8*sex)   + obese*(2.7*(1 - sex) + 2.8*sex);   // 4 years old
