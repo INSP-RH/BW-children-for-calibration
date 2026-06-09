@@ -1,15 +1,3 @@
----
-title: "bw: Dynamic Body Weight Model"
-output: github_document
----
-
-```{r setup, include=FALSE, echo=FALSE, warning=FALSE,message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(fig.height = 12)
-library(ggplot2)
-library(bw)
-```
-
 The ``bw`` package implements the [Dynamic Weight Change model from _Hall et al._ for adults](https://www.niddk.nih.gov/research-funding/at-niddk/labs-branches/LBM/integrative-physiology-section/research-behind-body-weight-planner/Documents/Hall_Lancet_Web_Appendix.pdf) and the [Children dynamic weight model from Hall **et al**](http://www.thelancet.com/journals/lancet/article/PIIS2213-8587(13)70051-2/abstract) for children.
 
 
